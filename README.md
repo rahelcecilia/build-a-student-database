@@ -6,7 +6,6 @@ SELECT first_name, major
 FROM students
 WHERE 
 major = 'Database Administration'
-
 ```
 <strong> Result : </strong>
 
@@ -20,7 +19,6 @@ WHERE
 gpa != 'null'
 ORDER BY gpa DESC
 Limit 5 
-
 ```
 
 <strong> Result : </strong>
