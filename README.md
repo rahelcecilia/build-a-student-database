@@ -37,4 +37,17 @@ major NOT LIKE 'Data%' and major != 'null'
 
 ![image](https://user-images.githubusercontent.com/112471006/200634068-f1a5f068-5b1e-4da7-9bb3-266e667ad992.png)
 
+### Displays and lists the majors in a course!
+```
+SELECT course,
+COUNT (DISTINCT major) AS total_major,
+STRING_AGG(DISTINCT major, ', ') AS list_of_major
+FROM courses
+GROUP BY courses.course
+```
+
+<strong> Result : </strong>
+![image](https://user-images.githubusercontent.com/112471006/200896965-d0989d9a-ea72-4043-b9c9-34e79c389247.png)
+
+
 
