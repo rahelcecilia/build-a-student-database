@@ -49,5 +49,20 @@ GROUP BY courses.course
 <strong> Result : </strong>
 ![image](https://user-images.githubusercontent.com/112471006/200896965-d0989d9a-ea72-4043-b9c9-34e79c389247.png)
 
+### Show the order of the majors that students follow the most and a list of names of participants who follow it!
+```
+SELECT major,
+COUNT (first_name) AS total_students,
+STRING_AGG(first_name, ', ') AS list_of_students
+FROM students
+WHERE major != 'null'
+group by major
+ORDER BY total_students DESC
+```
+
+<strong> Result : </strong>
+![image](https://user-images.githubusercontent.com/112471006/200900189-d453f447-7738-484a-be35-24d8a4aacc04.png)
+
+
 
 
